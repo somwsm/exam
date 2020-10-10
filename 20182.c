@@ -57,7 +57,7 @@ int find_pos(Ilist *l, int x){
         }else if(l->array[i] > x){
             upper = i;
         }else{
-            lower = i;
+            lower = i+1;
         }
     }
 
@@ -86,6 +86,10 @@ Ilist *make_list(){
     append(l, 20);
     insert(l, 10);
     append(l, 30);
+    append(l, 50);
+    append(l, 60);
+    append(l, 70);
+    insert(l, 40);
 
     return l;
 }
@@ -194,7 +198,7 @@ int main(){
 
     free_ilist(l);
 
-    Ilist *ul = make_listu();
+    /*Ilist *ul = make_listu();
 
     Ilist *u = uniq(ul);
 
@@ -217,7 +221,7 @@ int main(){
 
     free_ilist(m1);
     free_ilist(m2);
-    free_ilist(m);
+    free_ilist(m);*/
 
     return 0;
 }
